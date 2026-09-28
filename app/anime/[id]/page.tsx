@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+
 import {Video} from "@/app/components/Video";
 import {Reviews} from "@/app/components/Reviews";
 import {Recommendations} from "@/app/components/Recommendations";

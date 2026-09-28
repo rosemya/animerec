@@ -47,7 +47,7 @@ export const NavBar = () => {
       <Link href={"/"} className={"text-4xl"}>AnimeRec</Link>
       <div className={"flex gap-4"}>
         <Link href={"/"} className={currentRoute === "/" ? activeStyle : nonActiveStyle}>Top</Link>
-        <Link href={"/rec"} className={currentRoute === "/rec" ? activeStyle : nonActiveStyle}>Recommended</Link>
+        <Link href={"/recommend"} className={currentRoute === "/recommend" ? activeStyle : nonActiveStyle}>Recommended</Link>
       </div>
       <input
         className={"border-1 border-gray-300 rounded-4xl p-3"}
