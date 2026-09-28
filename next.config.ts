@@ -22,6 +22,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/images/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'cdn.myanimelist.net',
+        port: '',
+        pathname: '/img/sp/icon/**',
+      },
     ],
   },
 };

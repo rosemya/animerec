@@ -2,11 +2,12 @@
 
 import Link from "next/link";
 import React, {useState} from "react";
-import {usePathname} from "next/navigation";
+import {usePathname, useRouter} from "next/navigation";
 
 export const NavBar = () => {
   const [search, setSearch] = useState<string>("");
   const currentRoute = usePathname();
+  const router = useRouter();
   const activeStyle = ' text-pink-400';
   const nonActiveStyle = ' text-white';
 
@@ -25,8 +26,7 @@ export const NavBar = () => {
    */
   const handleSearch = () => {
     if (search.trim() !== "") {
-      // TODO - Implement search
-      alert("Search not implemented yet")
+      router.push(`/search?q=${search}`);
     } else {
       alert("Please enter a search value")
     }

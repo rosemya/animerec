@@ -35,7 +35,7 @@ export default async function Recommend({searchParams}: { searchParams: Promise<
         </div>
       ))}
 
-      <div className={"flex gap-25 items-center justify-center"}>
+      <div className={"flex gap-25 items-center justify-center mb-10"}>
         {sp.page ? parseInt(sp.page) > 1 ? <Button href={`/recommend?&page=${parseInt(sp.page)-1}`} text={"Previous"}  /> : undefined : undefined}
         {json.pagination.has_next_page && sp.page ? <Button href={`/recommend?page=${parseInt(sp.page)+1}`} text={"Next"} /> : <Button href={`/recommend?page=${2}`} text={"Next"} />}
       </div>

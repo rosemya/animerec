@@ -75,7 +75,7 @@ export default async function Anime({params}: {params: Promise<{id: string}>}) {
 
         {/* Details */}
         <div className={"flex  flex-col text-gray-400"}>
-          <p>Aired: <DefaultText text={`${monthNames[new Date(anime.aired.from).getMonth()]} ${anime.aired.prop.from.day}, ${anime.aired.prop.from.year}`} /></p>
+          <p>Aired: <DefaultText text={`${monthNames[new Date(anime.aired.from).getMonth()]} ${anime.aired.prop.from.day || ""} ${anime.aired.prop.from.year}`} /></p>
           <p>Duration: <DefaultText text={anime.duration} /></p>
           <p>Episodes: <DefaultText text={anime.episodes} /></p>
           <p>Favorites: <DefaultText text={anime.favorites} /></p>

@@ -17,7 +17,7 @@ export const Recommendations = async ({id}: {id: string}) => {
   const result = await data.json();
   const recommendations: Recommendation[] = result.data;
 
-  return (
+  return recommendations.length ? (
     <div className={"flex flex-col justify-center items-center gap-10"}>
       <p className={"text-4xl"}>Recommendations</p>
       <div className={"flex flex-col md:flex-row md:flex-wrap justify-center items-center gap-10 p-10"}>
@@ -28,5 +28,5 @@ export const Recommendations = async ({id}: {id: string}) => {
         ))}
       </div>
     </div>
-  )
+  ) : undefined
 }
